@@ -1,13 +1,11 @@
-/* 
- * File:   PWM.h
- * Author: E306-PC5
- *
- * Created on November 4, 2026, 2:09 PM
- */
-
 #ifndef PWM_H
 #define	PWM_H
+#define MOTEUR_DROIT 0
+#define MOTEUR_GAUCHE 1
 
-
+void InitPWM(void);
+//void PWMSetSpeed(float vitesseEnPourcents, int motorNumber);
+void PWMUpdateSpeed();
+void PWMSetSpeedConsigne(float vitesseEnPourcents, char moteur);
 #endif	/* PWM_H */
 

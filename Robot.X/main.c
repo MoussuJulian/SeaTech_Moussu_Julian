@@ -5,6 +5,8 @@
 #include "ChipConfig.h"
 #include "IO.h"
 #include "timer.h"
+#include "PWM.h"
+#include "Robot.h"
 int main (void){
     /***********************************************************************************************/
     //Initialisation oscillateur
@@ -17,6 +19,12 @@ int main (void){
     
     InitTimer23();
     InitTimer1();
+    
+    InitPWM();
+    //PWMSetSpeed(20,1);
+    ///PWMUpdateSpeed();
+    //PWMSetSpeedConsigne(30,MOTEUR_GAUCHE);
+    //PWMSetSpeedConsigne(30,MOTEUR_DROIT);
     
     LED_BLANCHE_1 = 1;
     LED_BLEUE_1 = 1;
